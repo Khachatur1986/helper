@@ -1,0 +1,18 @@
+                                 Aircrack-ng 1.2 rc4
+
+
+                   [00:11:06] 1384284 keys tested (2118.65 k/s) 
+
+
+                           KEY FOUND! [ phpoopda ]
+
+
+      Master Key     : D5 73 C0 D9 C5 7B 98 8F 30 CF A4 49 72 13 8A 8D 
+                       7F 0D 74 A5 F8 FA B0 46 BF DE 06 11 3D 5A 15 FE 
+
+      Transient Key  : 5D 2E D9 D6 FF 07 86 30 8B 5C BA 85 67 D4 B2 D5 
+                       6F 7D D2 56 DF AF C7 2B FC C8 DA 44 A4 72 B3 1F 
+                       5B 3B FF 96 35 5A 04 23 EC 88 50 CF C8 07 C7 BA 
+                       29 4A 6A 50 AF 65 D4 6A DF B7 5A 1C 2E 1B 14 FC 
+
+      EAPOL HMAC     : B8 72 F2 8C 44 0C 86 D7 07 BB 49 46 37 09 4C F0 

